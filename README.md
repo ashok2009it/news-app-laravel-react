@@ -1,8 +1,8 @@
 
 
-# NewsHub - A Modern News Aggregator Platform
+# Backend Take-Home challenge
 
-NewsHub is a cutting-edge news aggregator platform that brings you the latest news from various sources, all consolidated into one easy-to-use interface. With a backend powered by Laravel and a React.js frontend, NewsHub offers a seamless experience for users to stay updated with current events and insights from around the world.
+NewsHub is a cutting-edge news aggregator platform that brings you the latest news from various sources, all consolidated into one easy-to-use interface. With a backend powered by Laravel and a React.js frontend, this offers a seamless experience for users to stay updated with current events and insights from around the world.
 
 ## Prerequisites
 
