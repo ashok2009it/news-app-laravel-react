@@ -22,16 +22,14 @@ To get NewsHub up and running on your local machine, follow these steps:
    git clone https://github.com/ashok2009it/news-app-laravel-react
    cd news-app-laravel-react
 
-Once the containers are running, navigate to `http://localhost:8000` in your browser.
-
 ## Docker Compose Services
 
 The `docker-compose.yml` file orchestrates the following services:
 
-- `app`: Runs the PHP-FPM server for the Laravel backend.
-- `webserver`: Serves the React frontend and reverse proxies to PHP-FPM using Nginx.
-- `db`: Hosts the MySQL database for content storage.
-- `phpmyadmin`: Provides a web interface for MySQL database management accessible at `http://localhost:8080`.
+- `interview-take-home-challenge`: Runs the PHP-FPM server for the Laravel backend.
+- `nginx_webserver`: Serves the React frontend and reverse proxies to PHP-FPM using Nginx.
+- `mysql_db`: Hosts the MySQL database for content storage.
+- `pma`: PHPMyAdmin Provides a web interface for MySQL database management accessible at `http://localhost:8080`.
 
 ## Configuration Overview
 
@@ -42,12 +40,45 @@ Key configuration files include:
 - `nginx.conf`: Settings for the Nginx web server.
 - `vite.config.js`: Manages asset builds for Laravel and React.
 
-## Laravel Command: Fetch Articles
+Once the containers are running, navigate to `http://localhost:8000` in your browser.
 
-The custom Laravel artisan command `fetch:articles` retrieves articles from various news sources:
+## Build Docker Container
 
-```sh
-docker-compose exec app php artisan fetch:articles
+```docker-compose up -d --build```
+
+## Database
+
+Access Phpmyadmin: http://localhost:8080/
+
+```
+Server: mysql_db
+Username: root
+Password: root
+
+```
+
+## Configuration in .env file
+
+```
+- Database Configuration:
+
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=homechallenge
+DB_USERNAME=root
+DB_PASSWORD=root
+
+- Add Your Own NewsAPI keys:
+
+NEWS_API_KEY=7c987dfe38534eacbab28c140a90dsds
+THE_GUARDIAN_API_KEY=3ad39471-7a08-471c-99aa-0b3sdsdsdd
+NY_TIMES_API_KEY=ZQVVFGV4cV1qUwtVed09b6Xa5sdsdd
+
+```
+
+
+docker-compose exec interview-take-home-challenge php artisan fetch:articles
 
 This command connects to NewsAPI, The Guardian, and The New York Times, and updates the local articles database.
 
