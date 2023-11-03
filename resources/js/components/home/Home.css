@@ -1,0 +1,39 @@
+.home {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    min-height: 80vh;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.loading,
+.error {
+    text-align: center;
+}
+
+.articles-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.article {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.article-image {
+    width: 250px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.article-content {
+    flex-grow: 1;
+}

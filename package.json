@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.22.15",
+        "@types/react": "^18.2.34",
+        "@types/react-dom": "^18.2.14",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.8.0",
+        "typescript": "^5.2.2",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.18.0"
+    }
+}
