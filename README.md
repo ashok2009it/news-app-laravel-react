@@ -77,8 +77,18 @@ NY_TIMES_API_KEY=ZQVVFGV4cV1qUwtVed09b6Xa5sdsdd
 
 ```
 
+## Laravel Migration 
+
+```
+- Run Migration
+
+docker-compose exec interview-take-home-challenge php artisan migrate
+
+- Run Custom Artian command to Fetch News Data
 
 docker-compose exec interview-take-home-challenge php artisan fetch:articles
+
+```
 
 This command connects to NewsAPI, The Guardian, and The New York Times, and updates the local articles database.
 
