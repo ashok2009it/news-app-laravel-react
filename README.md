@@ -99,12 +99,39 @@ Note: Update CronTab like given code to fetch news every an hour:
 
 ```
 
-## Frontend Application
+## Frontend Application 
 
-- Built with React.js, initiating from `resources/js/app.tsx`.
-- Interfaces with Laravel APIs to fetch and display news articles.
+This project uses Vite as a build tool for the frontend assets, including React components. The following instructions will guide you through the process of setting up and running the frontend development environment.
 
-## Backend Application
+## Prerequisites
 
-- Laravel provides the API endpoints for the frontend.
-- The `FetchArticles` command in `app/Console/Commands/FetchArticles.php` is tasked with periodically updating articles.
+Before you begin, ensure you have Node.js installed on your system, which includes npm, which is necessary to install dependencies and run the scripts defined in package.json.
+
+## Installation
+
+```
+npm install
+```
+
+## Development Server
+
+```
+npm run dev
+
+```
+
+## Access Web Application and PhpMyAdmin 
+
+```
+- Web App
+http://localhost:8000/ 
+
+- Phpmyadmin
+
+http://localhost:8080/
+
+```
+
+
+
+
