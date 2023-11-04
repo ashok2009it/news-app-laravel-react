@@ -92,6 +92,13 @@ docker-compose exec interview-take-home-challenge php artisan fetch:articles
 
 This command connects to NewsAPI, The Guardian, and The New York Times, and updates the local articles database.
 
+Note: Update CronTab like given code to fetch news every an hour: 
+
+```
+* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
+
+```
+
 ## Frontend Application
 
 - Built with React.js, initiating from `resources/js/app.tsx`.
