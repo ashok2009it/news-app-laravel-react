@@ -65,6 +65,10 @@ class FetchArticles extends Command
         $articles = json_decode($response->getBody(), true)['articles'];
 
         foreach ($articles as $article) {
+
+            if (empty($article['description'])) {
+                continue;
+            }
             Article::updateOrCreate(
                 ['title' => $article['title'], 'source_name' => $article['source']['name']],
                 [
@@ -95,6 +99,10 @@ class FetchArticles extends Command
         foreach ($articles as $article) {
             $fields = $article['fields'] ?? [];
 
+            if (empty($fields['trailText'])) {
+                continue;
+            }
+
             Article::updateOrCreate(
                 ['title' => $article['webTitle'], 'source_name' => 'The Guardian'],
                 [
@@ -121,6 +129,11 @@ class FetchArticles extends Command
         $articles = json_decode($response->getBody(), true)['results'];
 
         foreach ($articles as $article) {
+
+            if (empty($article['abstract'])) {
+                continue;
+            }
+
             Article::updateOrCreate(
                 ['title' => $article['title'], 'source_name' => 'The New York Times'],
                 [
