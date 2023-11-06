@@ -99,6 +99,22 @@ Note: Update CronTab like given code to fetch news every an hour:
 
 ```
 
+## Run Unit/Feature Test command 
+
+
+```
+
+- PhpUnit Unmment give line 
+
+<env name="DB_CONNECTION" value="sqlite"/>
+<env name="DB_DATABASE" value=":memory:"/>
+
+- Run Command
+
+docker exec interview-take-home-challenge php artisan test
+
+``
+
 ## Frontend Application 
 
 This project uses Vite as a build tool for the frontend assets, including React components. The following instructions will guide you through the process of setting up and running the frontend development environment.
